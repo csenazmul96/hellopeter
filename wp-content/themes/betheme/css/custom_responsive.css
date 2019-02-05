@@ -1,0 +1,139 @@
+@media only screen and (min-width: 1239px) { 
+	/*Package page responsive style start*/
+	.packege_blog_item_wrap .packege_blog_content{padding:0px 15px; }
+.packege_blog_item_wrap .packege_blog_footer a{padding: 10px 30px; } 
+/*Package page responsive style exit*/
+
+}/* Frame Exit *********************************************************************************************************************** */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+/*Home page responsive style start*/
+.trusted_brand_lcolumn  {    margin-top: 74px; height: 400px !important;}
+.Let_your_rdata{height:450px;}
+.review_blog_section_padding{padding-left: 0px; padding-right: 0px;}
+/*Home page responsive style exit*/
+/*Menu responsive style start*/
+.create-account-menu{margin-left: 0px !important;}
+.sign-in-menu{background: #00aff0; border: 0px; border-bottom: 1px solid #202020;}
+.sign-in-menu a span{color:#fff !important;}
+#Side_slide a:not(.button){text-transform: uppercase;}
+body:not(.template-slider):not(.header-simple) #Header{min-height: auto;} 
+#Side_slide #menu ul li a{    padding: 11px 0px 10px 10px}
+/*Menu responsive style exit*/
+/*Package page responsive style start*/
+.packege_blog_item_wrap .packege_blog_content{padding:0px 15px; }
+.packege_blog_item_wrap .packege_blog_image{margin:15px auto;}
+ .free .packege_blog_header, .lite .packege_blog_header {padding-bottom: 35px; }
+.package_page_blog_wrap{padding:0% 0%;} 
+.datatable_heading{line-height: 35px;font-size: .7rem;}
+.packege_blog_item_wrap .packege_blog_footer a{padding: 10px 30px;    font-size: .8rem;}
+.packege_blog_item_wrap .packege_blog_content p{font-size: .8rem;}
+.packege_blog_item_wrap .packege_blog_image{height: 100px;width: 100px;}
+.packege_blog_item_wrap .packege_blog_image .image_second_wrap{height: 60px;width: 60px;margin-left: 20px;margin-top: 20px;}
+/*Package page responsive style exit*/
+
+}/* Frame Exit *********************************************************************************************************************** */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+/*Home page responsive style start*/
+.trusted_brand_lcolumn  {    margin-top: 74px; height: 322px !important;}
+.Let_your_rdata{height: 335px;}
+.Let_your_rdata .image_frame{height: 420px !important;}
+.trusted_brand_rcolumn{padding-top: 40px;}
+.h2_reset{font-size: 1.5rem;}
+.Become_Hellopeter .a_firsrt_item,.Become_Hellopeter .a_second_item{padding: 1rem 2.5rem !important;}
+/*Home page responsive style exit*/
+/*Menu responsive style start*/
+.create-account-menu{margin-left: 0px !important;}
+.sign-in-menu{background: #00aff0; border: 0px; border-bottom: 1px solid #202020;}
+.sign-in-menu a span{color:#fff !important;}
+#Side_slide a:not(.button){text-transform: uppercase;}
+body:not(.template-slider):not(.header-simple) #Header{min-height: auto;} 
+/*Menu responsive style exit*/
+/*Resorce page responsive style start*/ 
+.resorce_page_menu a{font-size: .8rem;}
+.review_blog_section_padding{padding-left: 0px; padding-right: 0px;}
+/*Resorce page responsive style exit*/
+/*Package page responsive style start*/
+.packege_blog_item_wrap .packege_blog_content{padding:0px 15px; }
+.packege_blog_item_wrap .packege_blog_image{margin:15px auto;}
+ .free .packege_blog_header, .lite .packege_blog_header {padding-bottom: 32px; }
+.package_page_blog_wrap{padding:0% 0%;} 
+.datatable_heading{line-height: 35px;font-size: .7rem;}
+.packege_blog_item_wrap .packege_blog_footer a{padding: 10px 30px;    font-size: .8rem;}
+.packege_blog_item_wrap .packege_blog_content p{font-size: .8rem;}
+.packege_blog_item_wrap .packege_blog_image{height: 100px;width: 100px;}
+.packege_blog_item_wrap .packege_blog_image .image_second_wrap{height: 60px;width: 60px;margin-left: 20px;margin-top: 20px;}
+/*Package page responsive style exit*/
+
+} /* Frame Exit *********************************************************************************************************************** */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+/*Menu responsive style start*/
+.create-account-menu{margin-left: 0px !important;}
+.sign-in-menu{background: #00aff0; border: 0px; border-bottom: 1px solid #202020;}
+.sign-in-menu a span{color:#fff !important;}
+#Side_slide a:not(.button){text-transform: uppercase;}
+body:not(.template-slider):not(.header-simple) #Header{min-height: auto;} 
+/*Menu responsive style exit*/
+/*Home page responsive style start*/
+.h2_reset{font-size: 2rem;}
+.Become_Hellopeter .a_firsrt_item,.Become_Hellopeter .a_second_item{padding: 1rem 2.5rem !important;}
+.trusted_brand_lcolumn .image_frame {height: 475px !important;}
+.Let_your_rdata .image_frame{height: 420px !important;}
+/*Home page responsive style start*/
+/*Resorce page responsive style start*/
+.review_blog_wrap .post-item{width:45% !important; float: left;    margin-right: 10px !important;}
+.review_blog_section_padding{padding-left: 0px; padding-right: 0px;}
+/*Resorce page responsive style exit*/
+/*Package page responsive style start*/
+.packege_blog_item_wrap .packege_blog_content{padding:0px 15px;min-height: 200px;}
+.packege_blog_item_wrap .packege_blog_image{margin:15px auto;}
+.lite{margin-top: 0px;}
+.package_page_blog_wrap{padding:0% 13%;}
+.package_data_table {padding:0% 0% !important;}
+.datatable_heading{line-height: 35px;font-size: .7rem;}
+/*Package page responsive style exit*/
+
+}/* Frame Exit *********************************************************************************************************************** */
+@media only screen and (max-width: 575px) {
+
+/*Feature Page style start*/
+.h4_reset{font-size: 22px !important;}
+.no_border{float: left;}
+.Build_brand_content_item img, .feture_getlist_bottom_item img{float: left; padding-right: 15px;margin-top:30px;}
+.Build_brand_content_item p, .feture_getlist_bottom_item p{ margin-left: 58px;}
+.review_blog_section_padding .column_column  {width:50% !important; float: left;}
+
+.h5_reset{font-size: 1.5rem !important;}
+/*Feature Page style exit*/
+/*Home page responsive style start*/
+.h2_reset{font-size: 22px;}
+.primary_btn{font-size:12px !important;}
+.display_none{display:block;}
+.display_block{display:none;}
+.payment_brand_column{margin-bottom:5px !important;}
+.widget_nav_menu ul li a{padding-right: 1.1rem;}
+.Become_Hellopeter .a_firsrt_item,.Become_Hellopeter .a_second_item{    padding: 1rem 1rem !important; margin: 0px;}
+.header-plain #Top_bar .menu_wrapper{position: absolute;}
+.trusted_brand_rcolumn{padding-top: 40px !important;}
+.trusted_brand_lcolumn .image_frame {height: 475px !important;}
+.Let_your_rdata .image_frame{height: 350px !important;}
+/*Home page responsive style exit*/
+/*Menu responsive style start*/
+.create-account-menu{margin-left: 0px !important;}
+.sign-in-menu{background: #00aff0; border: 0px; border-bottom: 1px solid #202020;}
+.sign-in-menu a span{color:#fff !important;}
+#Side_slide a:not(.button){text-transform: uppercase;}
+body:not(.template-slider):not(.header-simple) #Header{min-height: auto;    padding-bottom: 5px;} 
+/*Menu responsive style exit*/
+
+/*Package page responsive style start*/
+.packege_blog_item_wrap .packege_blog_content{padding:0px 15px;min-height: auto;}
+.packege_blog_item_wrap .packege_blog_image{margin:15px auto;}
+.lite{margin-top: 0px;}
+.package_page_blog_wrap{padding:0% 0%;}
+.datatable_heading{line-height: 35px;font-size: .7rem;}
+/*Package page responsive style exit*/
+
+}/* Frame Exit *********************************************************************************************************************** */
