@@ -13,7 +13,7 @@ if( $logo_text = mfn_opts_get( 'logo-text' ) ){
 	$logo_class = false;
 }
 
-echo '<div class="logo'. $logo_class .'">';
+echo '<div class="logo'. $logo_class .' ">';
 
 	/*
 	 * Options

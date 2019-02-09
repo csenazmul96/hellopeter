@@ -195,7 +195,7 @@ p{font-size:1rem;line-height: 1.5rem;font-family:"Open Sans", BlinkMacSystemFont
 #nav_menu-2{padding-bottom:10px !important;}
 
 /*Registration*/
-.registration_column{float: left;padding-top: 50px;padding-bottom: 50px;}
+.registration_column{float: left;padding-top: 50px;padding-bottom: 50px;background: #fff !important;}
 .reg_container input{width: 100%;}
 .reg_container {width: 72%;
     margin-left: 19%;}
@@ -270,9 +270,7 @@ padding-right: 5px;margin: 0px;}
  .business_industrial .collapse li{float: left;}
  .business_industrial .collapse li .main_menu2_item{padding: 10px 23px;
     border-radius: 4px;color: #fff; margin-left: 30px;}
- .business_industrial .collapse li .Business{background: #5cb85c; border-color: #5cb85c;}
-    .business_industrial .collapse li .review{background: #f0ad4e; border-color: #f0ad4e;}
-    .business_industrial .collapse li .Login{background: none; border-color: none;    color: #666;}
+ 
     .review_submit_form .bf-input select{    padding: 0px !important;}
  /*business_industrial Menu exit*/
 
@@ -283,7 +281,7 @@ padding-right: 5px;margin: 0px;}
   .review_submit_form .bf_field_group {text-align: left; float: left;width: 100%;}
   .form-inline .form-control{width:100%;}
  /*write review page style exit*/
-
+.top_bar_left {width: 100% !important; }
 
 
 /*p:before {
@@ -291,3 +289,265 @@ padding-right: 5px;margin: 0px;}
     font-weight: bold;
     font-style: italic;
 }*/
+
+/*Login page style start*/
+.Login_column{text-align: center;}
+.Login_column .logo a img{width: 78%; margin-bottom: 44px;}
+.review_form_login .form-group label{margin: 0;padding:0;float: left;}
+.review_form_login .form-group input{width: 100%;    margin-bottom: 10px; line-height: 40px; border: 1px solid #ccc; border-radius: 2px; padding: 0px 10px;}
+    .review_form_login .form-group a {margin-bottom:25px;color: gray;font-size: .8rem;float: right;}
+    .review_form_login .form-group .button {background: #f0ad4e; border-color: #f0ad4e; padding: .5rem 1.5rem; font-size: 1.2rem; color: #fff; cursor: pointer;}
+.locial_link{margin-bottom: 15px;}
+.locial_link  a{float: left;padding:0px !important;margin:0px;width:48%;text-align: center;}
+.locial_link  .facebook{    color: #fff;
+    background: #2e4c91;
+    border-color: #2e4c91;border-radius: 2px;
+    line-height: 40px; margin-right: 15px !important;}
+.locial_link  .skype{    color: #fff;
+    background: #00c3ff;
+    border-color: #00c3ff;border-radius: 2px;
+    line-height: 40px;  }
+    .hr:after {
+    content: "";
+    display: block;
+    height: 1px;
+    position: absolute;
+    top: 38%;
+    z-index: 1;
+    width: 67%;
+    border-bottom: 1px dashed #ccc;
+}
+.hr__text {
+  margin-top: 15px;
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    padding: 0 1em;
+    background: #fff;
+    font-size: 1.2em;
+}
+.Login_column{width: 70%;min-height: 570px;
+    overflow: hidden;
+    margin: 0px auto;}
+.Login_column .logo, .locial_link, .text-center{float: left;width: 100%;}
+
+.business_login .form-group input{width: 100%;      line-height: 35px; border: 1px solid #dbdbdb!important; border-radius: 0px; padding: 0px 10px;}
+.business_login .form-group a {margin-bottom:25px; font-size: .7rem;float: right;}
+ .business_login .form-group .button {    color: #FFFFFF !important;
+    background-color: #288FBE !important;
+    border-color: #288FBE !important; padding: 0rem 1.5rem; font-size: 1.2rem; color: #fff; cursor: pointer;text-transform: uppercase;font-size: .8rem}
+    .login_page_sidebar{float: left;}
+   .login_page_sidebar .row h2 { margin-top: 70%; 
+    text-align: right;
+    float: right; 
+    margin-right: 30px;
+    width: 100%;
+    margin-bottom: 15px; color: #fff; text-transform: uppercase;font-size: 28px;}
+    .business_login p{font-size: .75rem; }
+    .login_page_sidebar .row p{color: #fff;text-transform: uppercase;float: right;width: 100%;margin-right: 30px;text-align: right;}
+    .user_registration_form .form-group{float: left;width: 100%;}
+    .user_registration_form .form-group .form-control{border-radius: 2px;width: 100%;}
+    .user_reg_column .locial_link a{color: #fff; background: #2e4c91; border-color: #2e4c91; border-radius: 2px; width: 100%; padding: 15px 5px !important; font-size: 1.2rem;}
+    .user_reg_column p{color: gray;}
+    .user_reg_column .locial_link{margin-bottom: 5px !important;}
+    .user_reg_column .hr:after{margin-top: -5% !important;} 
+    .user_reg_column .form-group p:first-child{margin-top: 23px;}
+    .user_reg_column .form-group p{font-size: .8rem;margin-bottom: 0px;}
+    .user_reg_column .form-group .button {    color: #fff; background: #ec971f; border-color: #ec971f; padding: .5rem 1.5rem; font-size: 1.2rem; color: #fff; cursor: pointer;height: 60px;}
+   .user_reg_column{width: 80% !important;min-height: 570px;
+    overflow: hidden;
+    margin: 0px auto;}
+    .user_reg_column .logo a img{width: 68% !important; margin-bottom: 17px;}
+    .business_registration_form .form-group .form-control{width: 100%;margin-bottom: 0px;}
+    .business_registration_form .form-group select{width: 100%;}
+    .business_registration_form .form-group {}
+    .business_registration{width: 80%;}
+    .business_registration_form .form-group input[type="checkbox"]{height: 12px;width: 12px;float: left;margin-top:5px;}
+    .business_registration_form .form-group p{font-size: .8rem;float: left;margin-left: 5px;}
+    .business_registration_form .form-group .button {background: #00aff0; border-color: #00aff0; padding: 0rem 1rem; font-size: 1.2rem; color: #fff; cursor: pointer; height: 40px; width: 48%; border-radius: 0px;float: right;}
+
+/*Login page style Exit*/
+
+/*Home page Menu style start*/
+.review_page_menu_wrap .wpml-lang-dropdown{width: 88%;text-align: right;}
+.menuo-right #Top_bar .menu_wrapper{width: 70% !important;  }
+.review_page_menu_wrap{  margin: 30px auto;}
+#menu-main-menu{float: right !important;}
+.review_page_menu_wrap .wpml-lang-dropdown li{float: right !important;    margin-left: 10px;}
+
+ 
+
+.review_page_menu_wrap .wpml-lang-dropdown  .Business a{padding: 10px 23px;
+    border-radius: 2px;
+    color: #fff;
+     background: #5cb85c; border-color: #5cb85c;}
+    .review_page_menu_wrap .wpml-lang-dropdown  .review a{padding: 10px 23px;
+    border-radius: 2px;
+    color: #fff;
+     background: #f0ad4e; border-color: #f0ad4e;}
+    .review_page_menu_wrap .wpml-lang-dropdown  .Login a{background: none; border-color: none;    color: #666;}
+
+ .top_bar_left  .logo{width: 150px;}
+ .review_page_menu   .logo{width: 248px !important;padding-top: 17px;padding-bottom: 10px;    margin-left: 8.4% !important;}
+/*Home page Menu style exit*/
+
+/* Review page review show */
+.review_item_wrap{float: left;width: 100%;padding:30px;}
+.homepage_tab_panel{    background: #fff; width: 100%; float: left;}
+.review_item_wrap .review_item .review_item_content h6{margin:0px;}
+.review_item_wrap .review_item .review_item_content p{margin-bottom:0px;}
+.review_item_wrap .review_item .review_item_content h6 a{color: gray;font-size: .75rem;line-height: 1.2rem; text-transform: uppercase;}
+.review_item_wrap .review_item .review_item_content h6 a:hover{text-decoration: underline;}
+.review_item_wrap .review_item .review_item_content p a{color: #00aff0;font-size: 1rem;line-height: 1.2rem; }
+.review_item_wrap .review_item .review_item_image{ }
+.review_item_image_wrap .review_item_image{text-align: center;    margin-top: 32px;}
+.review_item_image_wrap .review_item_image img{border-radius: 100px;height: 52px;width: 52px; }
+.review_item_image_wrap .review_item_image  a{float: left; width: 100%; font-size: .7rem; color: gray; line-height: .9rem;}
+.review_item_image_wrap:after{content: ""; display: block; height: 87px; position: absolute; top: 30px; z-index: 1; width: 1px; background: #D8E2E7; }
+.review_item_column6{float: left;display: block;}
+.review_item_image_wrap{float: left;}
+
+.review_item_content .starrr span{font-size: 1rem; float: left; background-color: rgb(232, 68, 31);margin-right: 2px; color: #fff; border-radius: 4px;}
+.review_item_content img{float: left; width: 70px; margin-right: 5px;margin-top: 5px;}
+.review_item_image_wrap .review_item_image  span{float: left; width: 100%; font-size: .7rem; color: rgb(255, 148, 0); line-height: .9rem;}
+.top_responding_item_wrap{background: #EAEAEA; float: left;width: 100%;    padding: 15px;
+    margin-bottom: 30px;}
+.top_responding_item_wrap  .col-md-9,.top_responding_item_wrap  .col-md-3{float: left;width: 100%;}
+
+.top_responding_item_wrap .review_item_wrap{padding: 0px !important;}
+.top_responding_item_wrap .review_item_image{margin-top: 5px !important}
+.top_responding_item_wrap .review_item_image_wrap:after{top: 5px !important;}
+
+
+
+.error_msg{font-size: .7rem;color: red;width: 100%;float: left;}
+
+.rating-input__galaxy:not(:checked) input {
+    position: absolute;
+    visibility: hidden;
+}
+.rating-input__galaxy {
+    float: left;
+}
+.rating-input__galaxy label.disabled {
+    cursor: not-allowed;
+}
+.rating-input__galaxy:not(:checked) label {
+    float: right;
+    cursor: pointer;
+    color: #gray;
+}
+.rating-input .fa-star {
+    margin-right: 2px;
+    color: #gray;
+    padding: 4px 5px;
+    border-radius: 3px;
+    background-image: linear-gradient(transparent,rgba(0,0,0,.25));
+}
+.rating-input .fa-star.spacer {
+    margin-right: 6px;
+}
+.form-control:focus{    box-shadow: none; border: 1px solid #ccc; background: none !important; color: #444;}
+.input[type="text"]:focus{box-shadow: none; border: 1px solid #ccc; background: none !important; }
+
+input[type="date"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, select:focus, textarea:focus {
+    color: #444 !important;
+    background-color: none !important;
+     
+}
+.review_submit_form .form-group  .form-control{margin-bottom: 0px;}
+.review_submit_form .form-group  .button{width: 150px;float: right;}
+.form-control:disabled, .form-control[readonly]{background: #fff;}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+
+ 
+
+.arrow {
+  border: 2em solid transparent;
+  height: 0;
+  margin: 50vh auto;
+  width: 0;
+}
+
+.arrow.down {
+  border-bottom: none;
+  border-top-color: #e5e5e5;
+}
+.arrow.up {
+    border-bottom-color: #e5e5e5;
+    border-top: none;
+}
+/*** RADIAL PROGRESS ***/
+/* Circumference = 2πr */
+/* π = 3.1415926535898 */
+/* r = 35 */
+
+svg.radial-progress {
+  height: auto;
+  max-width: 62px; 
+  transform: rotate(-90deg);
+  width: 62px;
+}
+
+svg.radial-progress circle {
+  fill: rgba(0,0,0,0);
+  stroke: #fff;
+  stroke-dashoffset: 219.91148575129; /* Circumference */
+  stroke-width: 10;
+}
+
+svg.radial-progress circle.incomplete { opacity: 0.25; }
+
+svg.radial-progress circle.complete { stroke-dasharray: 219.91148575129; /* Circumference */ }
+
+svg.radial-progress text {
+  fill: rgb(255, 148, 0);
+  font: 400 1em/1 'Oswald', sans-serif;
+  text-anchor: middle;
+}
+
+/*** COLORS ***/
+/* Primary */
+
+svg.radial-progress:nth-of-type(6n+1) circle { stroke: rgb(255, 148, 0); }
+
+/* Secondary */
+
+svg.radial-progress:nth-of-type(6n+2) circle { stroke: #83e4e2; }
+
+/* Tertiary */
+
+svg.radial-progress:nth-of-type(6n+3) circle { stroke: #fd6470; }
+
+/* Quaternary */
+
+svg.radial-progress:nth-of-type(6n+4) circle { stroke: #fca858; }
+
+/* Quinary */
+
+svg.radial-progress:nth-of-type(6n+5) circle { stroke: #fddc32; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

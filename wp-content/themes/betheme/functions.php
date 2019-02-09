@@ -189,6 +189,8 @@ if( is_admin() ){
 	require_once LIBS_DIR .'/admin/class-mfn-changelog.php';
 }
 
+
+// Review user account submit start
 if(isset($_POST['submit'])){ 
 	 global $wpdb;  
     $tablename='wp_users';
@@ -196,30 +198,113 @@ if(isset($_POST['submit'])){
     $date= date_format($date,'Y-m-d H:i:s');
     $email=$_POST['email'];
     $myrows = $wpdb->get_results("SELECT * FROM wp_users WHERE user_email = '".$email."'");  
-    if(!empty($myrows)){  
-    	echo "<script language='javascript'> window.location = 'http://localhost/wpbetheme/user-registation/' </script>";
-    }else{ 
-	    $data=array(
-	        'user_login' => $_POST['user_name'], 
-	        'user_pass' => wp_hash_password($_POST['password']),
-	        'user_nicename' => $_POST['name'], 
-	        'user_email' => $_POST['email'],
-	        'user_phone' => $_POST['number'], 
-	        'user_url' => ' dfgfdg', 
-	        'user_activation_key'=>'',
-	        'user_registered' => $date, 
-	        'display_name' => $_POST['user_name']); 
+    if(!empty($myrows)){ 
+    	$_SESSION['email'] = 'Email already exists';
 
-	     $user_id = wp_insert_user($data);
+    // echo "Email already exists."; 
+    // header('Location:'.home_url().'/reviewer-registration/');
+    	echo '<script>window.location="'.home_url().'/reviewer-registration/";</script>';
+    }else{ 
+	     
+	    $data = array(
+			'user_login'    =>  $_POST['user_name'],
+			'user_email'    =>  $_POST['email'],
+			'user_pass'     =>  wp_hash_password($_POST['password']), 
+			'first_name'    =>  $_POST['name'],
+			'last_name'     =>  $_POST['l_name'], 
+			'display_name'   =>  $_POST['name'],
+			'role' 			=> 'Reviewer'
+			);
+	     $user_id = wp_insert_user($data); 
 	    if ( $user_id && !is_wp_error( $user_id ) ) {
 	        $code = sha1( $user_id . time() );
 	        $activation_link = add_query_arg( array( 'key' => $code, 'user' => $user_id ), get_permalink( /* YOUR ACTIVATION PAGE ID HERE */ )); 
 	        add_user_meta( $user_id, 'has_to_be_activated', $code, true );
 	        wp_mail( $email, 'ACTIVATION SUBJECT', 'CONGRATS BLA BLA BLA. HERE IS YOUR ACTIVATION LINK: ' . $activation_link );
 	    }
-	    echo "<script language='javascript'> window.location = 'http://localhost/wpbetheme/user-registation/' </script>";
+	    echo '<script>window.location="'.home_url().'/reviewer-registration/";</script>';
  	}
 }
+// Review user account submit exit
+// Business user account submit start
+if(isset($_POST['business'])){ 
+     global $wpdb;  
+    $tablename='wp_users';
+    $date= new DateTime(); 
+    $date= date_format($date,'Y-m-d H:i:s');
+    $email=$_POST['email'];
+    $user=$_POST['user_name'];
+    $myrows = $wpdb->get_results("SELECT * FROM wp_users WHERE user_email = '".$email."'");  
+    $user_ = $wpdb->get_results("SELECT * FROM wp_users WHERE user_login = '".$user."'");  
+    if(!empty($myrows)){ 
+        $_SESSION['email'] = 'Email already exists'; 
+        echo '<script>window.location="'.home_url().'/package-register-free/";</script>';
+    }else{  
+        if(!empty($user_)){ 
+            $_SESSION['email'] = 'User Name already exists'; 
+            echo '<script>window.location="'.home_url().'/package-register-free/";</script>';
+        }else{
+            $data = array(
+                'user_login'    =>  $_POST['user_name'],
+                'user_email'    =>  $_POST['email'],
+                'user_pass'     =>  wp_hash_password($_POST['password']), 
+                'first_name'    =>  $_POST['f_name'],
+                'last_name'     =>  $_POST['l_name'], 
+                'display_name'   =>  $_POST['f_name'],
+                // 'business_name'   =>  $_POST['name'],
+                // 'category'   =>  $_POST['cat'],
+                'role'          => 'Business'
+                );
+            // echo "<pre>";
+            // print_r($data);
+            // exit;
+             $user_id = wp_insert_user($data); 
+                add_action( 'personal_options_update', 'my_save_extra_profile_fields' );
+                add_action( 'edit_user_profile_update', 'my_save_extra_profile_fields' );
+
+                function my_save_extra_profile_fields( $user_id ) {
+
+                    if ( !current_user_can( 'edit_user', $user_id ) )
+                        return false;
+
+                    update_usermeta( $user_id, 'business_name', $_POST['name'] );
+                }
+
+            if ( $user_id && !is_wp_error( $user_id ) ) {
+                $code = sha1( $user_id . time() );
+                $activation_link = add_query_arg( array( 'key' => $code, 'user' => $user_id ), get_permalink( /* YOUR ACTIVATION PAGE ID HERE */ )); 
+                add_user_meta( $user_id, 'has_to_be_activated', $code, true );
+                wp_mail( $email, 'ACTIVATION SUBJECT', 'CONGRATS BLA BLA BLA. HERE IS YOUR ACTIVATION LINK: ' . $activation_link );
+            }
+            echo '<script>window.location="'.home_url().'/package-register-free/";</script>';
+        }
+    }
+}
+// Business user account submit exit
+// Review Submit form insert start
+// Business user account submit start
+if(isset($_POST['review'])){ 
+     global $wpdb;  
+    $tablename='wp_users';
+    $date= new DateTime(); 
+    $date= date_format($date,'Y-m-d H:i:s'); 
+     
+            $data = array(
+                'post_title'    =>  $_POST['title'],
+                'post_content'    =>  $_POST['content'],
+                'post_status'     =>  'publish', 
+                'post_author'    =>  get_current_user_id(), 
+                'post_type'    =>  'reviews', 
+                'comment_status'    =>  'open', 
+                'post_content_filtered'    =>  $_POST['rating'], 
+                'post_date'     =>$date
+                ); 
+             $user_id = wp_insert_post($data);  
+ 
+            echo '<script>window.location="'.home_url().'/write-a-review/";</script>';
+        
+}
+// Review submit form insert exit
 // Custom REview post type create
  function create_post_type() {
   register_post_type( 'Reviews',
@@ -246,9 +331,36 @@ if(isset($_POST['submit'])){
   );
 }
 add_action( 'init', 'create_post_type' );
+
+ function Business_cat() {
+  register_post_type( 'Business Category',
+    array(
+      'labels' => array(
+        'name' => __( 'Business Category' ),
+        'singular_name' => __( 'bin_cat' )
+      ), 
+      'supports'            => array( 'title'), 
+      'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'post',
+    )
+  );
+}
+add_action( 'init', 'Business_cat' );
+
  
- // Custom User Role create
-// function add_blog_manager_role(){
+
+//Custom User Role create
+// function add_new_user_role_reviewer(){
 //     add_role(
 //         'Reviewer',
 //         'Reviewer',
@@ -261,10 +373,78 @@ add_action( 'init', 'create_post_type' );
 //         )
 //     );
 // }
-// add_action( 'admin_init', 'add_blog_manager_role', 4 );
+// add_action( 'admin_init', 'add_new_user_role_reviewer', 4 );
 
-function add_blog_role_caps() {
-    $roles = array('Reviewer');
+// function new_user_role_reviewer_caps() {
+//     $roles = array('Reviewer');
+//     foreach($roles as $the_role) {
+//         $role = get_role($the_role);
+//         $role->add_cap( 'read' );
+//         $role->add_cap( 'read_blog');
+        
+//     }
+// }
+// add_action('admin_init', 'new_user_role_reviewer_caps', 5 );
+
+$result = add_role(
+    'basic_reviewer1',
+    __( 'Basic Reviewer' ),
+    array(
+        'read'         => true,  // true allows this capability
+        'edit_posts'   => true,
+        'delete_posts' => false, // Use false to explicitly deny
+    )
+);
+ 
+
+
+function wporg_simple_role_caps()
+{ 
+    $role = get_role('basic_reviewer1'); 
+    $role->add_cap('delete_posts', true);
+    $role->add_cap('edit_others_posts', true);
+}
+ 
+// add simple_role capabilities, priority must be after the initial role definition
+add_action('init', 'wporg_simple_role_caps', 11);
+
+
+function my_login_redirect( $url, $request, $user ){
+if( $user && is_object( $user ) && is_a( $user, 'WP_User' ) ) {
+if( $user->has_cap( 'administrator') or $user->has_cap( 'author')) {
+$url = admin_url();
+} else {
+$url = home_url('/');
+}
+}
+return $url;
+}
+add_filter('login_redirect', 'my_login_redirect', 10, 3 );
+
+// 
+
+ 
+ 
+ 
+
+ // BUsiness Role create
+function add_new_user_role_business(){
+    add_role(
+        'Business',
+        'Business',
+        array(
+            'read' => true,
+            'edit_posts' => false,
+            'delete_posts' => false,
+            'publish_posts' => false,
+            'upload_files' => true
+        )
+    );
+}
+add_action( 'admin_init', 'add_new_user_role_business', 4 );
+
+function new_user_role_business_caps() {
+    $roles = array('Business');
     foreach($roles as $the_role) {
         $role = get_role($the_role);
         $role->add_cap( 'read' );
@@ -279,27 +459,4 @@ function add_blog_role_caps() {
         $role->add_cap( 'delete_published_blog' );
     }
 }
-add_action('admin_init', 'add_blog_role_caps', 5 );
-
-function add_theme_caps() {
-    // gets the author role
-    $role = get_role( 'author' );
- 
-    // This only works, because it accesses the class instance.
-    // would allow the author to edit others' posts for current theme only
-    $role->add_cap( 'edit_others_posts' ); 
-}
-add_action( 'admin_init', 'add_theme_caps');
-
-// user Redirect
-// function my_login_redirect( $url, $request, $user ){
-// if( $user && is_object( $user ) && is_a( $user, 'WP_User' ) ) {
-// if( $user->has_cap( 'Reviewer')) {
-// $url = admin_url();
-// } else {
-// $url = home_url('/custom-page /');
-// }
-// }
-// return $url;
-// }
-// add_filter('login_redirect', 'my_login_redirect', 10, 3 );
+add_action('admin_init', 'new_user_role_business_caps', 5 );

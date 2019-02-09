@@ -608,7 +608,9 @@ if( ! function_exists( 'mfn_scripts' ) )
 		if( ! is_admin() ){
 			
 			wp_enqueue_script( 'jqueryi', 			THEME_URI .'/js/jquery.min.js', false, THEME_VERSION, true );
-			wp_enqueue_script( 'bootstrap', 			THEME_URI .'/js/bootstrap.min.js', false, THEME_VERSION, true );
+			wp_enqueue_script( 'bootstrap', 			THEME_URI .'/js/bootstrap.min.js', false, THEME_VERSION, true ); 
+			wp_enqueue_script( 'show_ads', 			THEME_URI .'/js/progress/show_ads.js', false, THEME_VERSION, true ); 
+			wp_enqueue_script( 'custom2', 			THEME_URI .'/js/progress/custom.js', false, THEME_VERSION, true ); 
 			wp_enqueue_script( 'dropdown', 			THEME_URI .'/js/bootstrap-dropdown.js', false, THEME_VERSION, true );
 			wp_enqueue_script( 'jquery-ui-core', 		THEME_URI .'/assets/ui/jquery.ui.core.js', false, THEME_VERSION, true );
 			wp_enqueue_script( 'jquery-ui-widget', 		THEME_URI .'/assets/ui/jquery.ui.widget.js', false, THEME_VERSION, true );

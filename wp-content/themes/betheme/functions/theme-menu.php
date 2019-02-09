@@ -13,7 +13,7 @@
  * --------------------------------------------------------------------------- */
 register_nav_menu( 'main-menu',				__( 'Main Menu | depth 5 (Header Overlay 1)', 'mfn-opts' ) );
 register_nav_menu( 'secondary-menu',		__( 'Secondary Menu | depth 2 (Header Split 5)', 'mfn-opts' ) );
-register_nav_menu( 'lang-menu',				__( 'Languages Menu | depth 1', 'mfn-opts' ) );
+register_nav_menu( 'lang-menu',				__( 'Home Page Menu | depth 1', 'mfn-opts' ) );
 register_nav_menu( 'social-menu',			__( 'Social Menu Top | depth 1', 'mfn-opts' ) );
 register_nav_menu( 'social-menu-bottom',	__( 'Social Menu Bottom | depth 1', 'mfn-opts' ) );
 
