@@ -772,6 +772,11 @@ function business_account_registration($atts, $content = null) {
 add_shortcode( 'review_write', 'review_write_shordcode' );
 
 function review_write_shordcode($atts, $content = null) {
+	$id = get_current_user_id();
+	if(empty($id)){
+		echo '<script>window.location="'.home_url().'/user-login";</script>';
+	}
+	else{ 
 	$select = '';
 	$query = new WP_Query( array( 'post_type' => 'Reviews') );
 	$blogusers = get_users( array( 'role' => 'Business' ) );
@@ -850,6 +855,7 @@ function review_write_shordcode($atts, $content = null) {
 					} 
 					</script>
 				</div> ';
+			}
 }
 // Review write form shordcode exit
 
